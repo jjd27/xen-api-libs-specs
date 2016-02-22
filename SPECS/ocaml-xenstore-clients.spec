@@ -37,7 +37,7 @@ make DESTDIR=%{buildroot}/opt/xensource/debug
 %install
 export OCAMLFIND_DESTDIR=%{buildroot}/%{_libdir}/ocaml
 mkdir -p $OCAMLFIND_DESTDIR
-make install DESTDIR=${buildroot}
+make install DESTDIR=%{buildroot}
 
 
 %files
