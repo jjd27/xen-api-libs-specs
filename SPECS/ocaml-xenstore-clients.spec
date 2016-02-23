@@ -45,7 +45,7 @@ make install DESTDIR=%{buildroot}
 %doc MAINTAINERS
 %doc README.md 
 %{_libdir}/ocaml/xenstore_transport
-%{buildroot}/opt/xensource/debug/xstest
+/opt/xensource/debug/xstest
 %exclude %{_libdir}/ocaml/xenstore_transport/*.a
 %exclude %{_libdir}/ocaml/xenstore_transport/*.cmxa
 %exclude %{_libdir}/ocaml/xenstore_transport/*.cmx
