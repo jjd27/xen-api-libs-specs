@@ -22,6 +22,7 @@ Summary:        Development files for %{name}
 Requires:       %{name} = %{version}-%{release}
 Requires:       ocaml-lwt-devel%{?_isa}
 Requires:       ocaml-xenstore-devel%{?_isa}
+Requires:       ocaml-ounit-devel%{?_isa}
 
 %description    devel
 The %{name}-devel package contains libraries and signature files for
@@ -37,7 +38,8 @@ make DESTDIR=%{buildroot}/opt/xensource/debug
 %install
 export OCAMLFIND_DESTDIR=%{buildroot}/%{_libdir}/ocaml
 mkdir -p $OCAMLFIND_DESTDIR
-make install DESTDIR=%{buildroot}
+mkdir -p %{buildroot}/opt/xensource/debug
+make install
 
 
 %files
